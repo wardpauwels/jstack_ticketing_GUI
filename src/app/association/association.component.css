@@ -1,0 +1,133 @@
+.chat {
+  list-style: none;
+  background: none;
+  padding: 0 0 50px 0;
+  margin: 60px 0 15px 0;
+}
+
+.chat li {
+  padding: 0.5rem;
+  overflow: hidden;
+  display: flex;
+}
+
+.chat .day {
+  position: relative;
+  display: block;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  height: 20px;
+  text-shadow: 7px 0 0 #252C33, 6px 0 0 #252C33, 5px 0 0 #252C33, 4px 0 0 #252C33, 3px 0 0 #252C33, 2px 0 0 #252C33, 1px 0 0 #252C33, 1px 0 0 #252C33, 0 0 0 #252C33, -1px 0 0 #252C33, -2px 0 0 #252C33, -3px 0 0 #252C33, -4px 0 0 #252C33, -5px 0 0 #252C33, -6px 0 0 #252C33, -7px 0 0 #252C33;
+  box-shadow: inset 20px 0 0 #252C33, inset -20px 0 0 #252C33, inset 0 -2px 0 rgba(255, 255, 255, 0.1);
+  line-height: 38px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.staffMessage {
+}
+
+.staffMessage .msg {
+  background-color: indianred;
+  border-top-left-radius: 0;
+  box-shadow: -1px 2px 0 #c1cbcd;
+}
+
+.staffMessage:before {
+  content: "";
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 5px solid indianred;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.userMessage {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.userMessage .msg {
+  background-color: deepskyblue;
+  border-bottom-right-radius: 0;
+  box-shadow: 1px 2px 0 #c1cbcd;
+}
+
+.userMessage:after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  float: right;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 5px solid deepskyblue;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  box-shadow: 0 2px 0 #c1cbcd;
+}
+
+.msg {
+  min-width: 50px;
+  padding: 10px;
+  border-radius: 2px;
+  word-break: break-all;
+}
+
+.msg .user {
+  font-size: 14px;
+  margin: -2px 0 5px 0;
+  color: #666;
+  font-weight: 700;
+  transition: all .2s ease;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.msg p {
+  font-size: 13px;
+  margin: 0 0 2px 0;
+  transition: all .2s ease;
+}
+
+.msg time {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, .35);
+  margin-top: 3px;
+  float: right;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input.textarea {
+  margin-left: 300px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 99;
+  background: #fafafa;
+  border: none;
+  outline: none;
+  padding-left: 55px;
+  padding-right: 55px;
+  color: #666;
+  font-weight: 400;
+}

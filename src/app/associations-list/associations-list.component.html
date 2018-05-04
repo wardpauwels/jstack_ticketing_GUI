@@ -1,0 +1,18 @@
+<section id="leftComponent">
+  <div class="sidebar" *ngFor="let association of associations">
+    <a routerLink="{{association.id}}">
+      {{association.ticket.description}}
+      <ul>
+        <li>
+          {{association.ticket.createdAt}}
+        </li>
+        <li>
+          {{association.ticket.creator}}
+        </li>
+      </ul>
+    </a>
+  </div>
+</section>
+<section id="conversationComponent">
+  <router-outlet></router-outlet>
+</section>

@@ -41,11 +41,11 @@ input[type="text"], input[type="password"] {
 }
 
 input[type="text"]:focus, input[type="password"]:focus {
-  border: 1px solid #3498db;
+  border: 1px solid #08ace1;
 }
 
 button {
-  background: #F25531;
+  background: #f49900;
   border:none;
   color: white;
   font-size: 18px;

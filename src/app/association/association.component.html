@@ -1,0 +1,15 @@
+<section id="associationComments">
+  <ul class="chat">
+    <li *ngFor="let association of associations"
+        [ngClass]="(association.ticket.creator==username)?'userMessage':'staffMessage'">
+
+      <div class="msg">
+        <div class="user">{{association.ticket.creator}}</div>
+        <p>{{association.ticket.description}}</p>
+        <time>{{association.ticket.createdAt | date:"medium" }}</time>
+      </div>
+
+    </li>
+  </ul>
+  <input id="answerTextArea" class="textarea" type="text" placeholder="Type here!" #box (keyup.enter)="sendMessage(box.value)"/>
+</section>

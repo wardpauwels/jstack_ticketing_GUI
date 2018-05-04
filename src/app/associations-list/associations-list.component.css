@@ -1,0 +1,36 @@
+#leftComponent {
+  width: 300px;
+  float: left;
+  background-color: #08ace1;
+  overflow-y: scroll;
+  max-height: 90vh;
+  overflow-x: hidden;
+}
+
+#conversationComponent {
+  margin-left: 300px;
+  padding-left: 25px;
+}
+
+.sidebar {
+  width: 100%;
+  border-bottom: 2px solid #71b643;
+}
+
+.sidebar > a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  line-height: 30px;
+  width: 262px;
+  padding-left: 20px;
+}
+
+.sidebar > a:hover {
+  text-decoration: underline;
+  background-color: #92C1BC;
+}
+
+.sidebar > a > ul {
+  margin: 0;
+}

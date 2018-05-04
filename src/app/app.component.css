@@ -3,19 +3,10 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px;
-  background-color: #CAD441;
-  border-bottom: 2px solid #02A4A8;
+  height: 10vh;
+  background-color: #71b643;
+  border-bottom: 2px solid #08ace1;
   z-index: 1;
-}
-
-footer {
-  text-align: center;
-  width: 100%;
-  bottom: 0;
-  position: fixed;
-  height: 30px;
-  background-color: #FF7334;
 }
 
 header > div {
@@ -29,5 +20,7 @@ header > div {
 }
 
 .container {
-  margin: 150px 25px 50px 25px;
+  background-color: #e5e5e5;
+  margin-top: 10vh;
+  height: 90vh;
 }

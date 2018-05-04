@@ -1,29 +1,32 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import "rxjs/add/operator/map";
+import {User} from "../_models";
+import {TokenStorage} from 'app/_token/token.storage';
+
 
 @Injectable()
 export class LoginService {
 
-  constructor(private http: HttpClient) {
+  private url: string = "http://localhost:8080/api";
+  private newToken: string;
+
+  constructor(private http: HttpClient,
+              private token: TokenStorage) {
   }
 
-  login(username: string, password: string) {
-    return this.http.post('http://localhost:8080/api/login', {username: username, password: password})
-      .map(user => {
-        console.log(user);
-        // login successful if there's a user
-        if (user) {
-          // store user details and jwt token in local storage to keep user logged in between page refreshes
-          sessionStorage.setItem('currentUser', JSON.stringify(user));
-        }
-        return user;
+  login(user: User) {
+    return this.http.post(this.url + '/login', '{\"username\":\"' + user.username + '\",\"password\":\"' + user.password + '\"}',  {observe: 'response'})
+      .map(res => {
+        this.newToken = res.headers.get("Authorization");
+        this.token.saveToken(this.newToken);
+        return this.newToken;
       });
   }
 
-  static logout() {
-    // remove user from local storage to log user out
-    sessionStorage.removeItem('currentUser');
+  logout() {
+    this.http.post(this.url + "/logout", null);
+    this.token.signOut();
   }
 
 }
